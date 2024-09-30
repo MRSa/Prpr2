@@ -3,7 +3,8 @@
         <Group x="0" y="0" width="450" height="450" name="background_image">
             <PartImage x="0" y="0" width="450" height="450">
                 <Variant mode="AMBIENT" target="alpha" value="0"/>
-                <Image resource="@drawable/ao1" />
+                <Image resource="ao1" />
+                <!-- <Image resource="image01" /> -->
             </PartImage>
         </Group>
 
