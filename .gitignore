@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.idea/runConfigurations/Gokigen.xml
+/.idea/other.xml
+/.idea/misc.xml
