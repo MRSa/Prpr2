@@ -23,4 +23,4 @@ WFFを使用する場合のウォッチフェイス作成方法。(ビルドや�
   adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 
-インストール後、Wear OS端末側でウォッチフェイスを切り替える。
+インストール後、Wear OS端末側で操作し、ウォッチフェイスを切り替える。
