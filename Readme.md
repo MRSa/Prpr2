@@ -20,7 +20,7 @@ WFFを使用する場合のウォッチフェイス作成方法。(ビルドや�
 ## インストール方法
 
 ```
-  adb install app/build/outputs/apk/debug/app-debug.apk
+  adb install watchface/build/outputs/apk/debug/watchface-debug.apk
 ```
 
 インストール後、Wear OS端末側で操作し、ウォッチフェイスを切り替える。
