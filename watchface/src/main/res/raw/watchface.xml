@@ -3,6 +3,8 @@
         <Condition>
             <!-- 分岐の選択肢 -->
             <Expressions>
+                <!-- １分おき -->
+              <!--
                 <Expression name="unit_equal_zero">
                     <![CDATA[[MINUTE_UNITS_DIGIT] == 0]]>
                 </Expression>
@@ -32,6 +34,38 @@
                 </Expression>
                 <Expression name="unit_equal_nine">
                     <![CDATA[[MINUTE_UNITS_DIGIT] == 9]]>
+                </Expression>
+             -->
+                <!-- 10秒おき -->
+                <Expression name="unit_equal_zero">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 0]]>
+                </Expression>
+                <Expression name="unit_equal_one">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 1]]>
+                </Expression>
+                <Expression name="unit_equal_two">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 2]]>
+                </Expression>
+                <Expression name="unit_equal_three">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 3]]>
+                </Expression>
+                <Expression name="unit_equal_four">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 4]]>
+                </Expression>
+                <Expression name="unit_equal_five">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 5]]>
+                </Expression>
+                <Expression name="unit_equal_six">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 6]]>
+                </Expression>
+                <Expression name="unit_equal_seven">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 7]]>
+                </Expression>
+                <Expression name="unit_equal_eight">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 8]]>
+                </Expression>
+                <Expression name="unit_equal_nine">
+                    <![CDATA[[SECOND_TENS_DIGIT] == 9]]>
                 </Expression>
             </Expressions>
 
