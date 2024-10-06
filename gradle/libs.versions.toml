@@ -2,9 +2,11 @@
 agp = "8.5.2"
 kotlin = "1.9.0"
 playServicesWearable = "18.2.0"
+wearComplicationsDataSourceKtx = "1.0.0-alpha22"
 
 [libraries]
 play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "playServicesWearable" }
+wear-complications-data-source-ktx = { group = "androidx.wear", name = "wear-complications-data-source-ktx", version.ref = "wearComplicationsDataSourceKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
