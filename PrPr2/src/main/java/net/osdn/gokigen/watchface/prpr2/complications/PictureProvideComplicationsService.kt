@@ -15,27 +15,27 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
 {
     private val provider = DrawableResourceProvider()
 
-    override fun getPreviewData(type: ComplicationType): ComplicationData?
+    override fun getPreviewData(type: ComplicationType): ComplicationData
     {
-        return getComplicationData(null, true)
+        return (getComplicationData( true))
     }
 
-    override suspend fun onComplicationRequest(request: ComplicationRequest): ComplicationData?
+    override suspend fun onComplicationRequest(request: ComplicationRequest): ComplicationData
     {
         try
         {
+            Log.v(TAG, "onComplicationRequest(): ${request.complicationType} : ${request.complicationInstanceId}")
             if (request.complicationType != ComplicationType.PHOTO_IMAGE)
             {
                 return NoDataComplicationData()
             }
-
-            Log.v(TAG, "onComplicationRequest(): ${request.complicationType} : ${request.complicationInstanceId}")
+            return (getComplicationData())
         }
         catch (e: Exception)
         {
             e.printStackTrace()
         }
-        TODO("Not yet implemented")
+        return (NoDataComplicationData())
     }
 
     override fun onComplicationActivated(complicationInstanceId: Int, type: ComplicationType)
@@ -49,14 +49,14 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
         Log.d(TAG, "onComplicationDeactivated(): $complicationInstanceId")
     }
 
-    private fun getComplicationData(tapAction: PendingIntent?, isPreview: Boolean = false): ComplicationData
+    private fun getComplicationData(isPreview: Boolean = false): ComplicationData
     {
         return (PhotoImageComplicationData.Builder(
             photoImage = Icon.createWithResource(this, provider.getDrawable()),
             contentDescription = PlainComplicationText.Builder(
                 text = if (isPreview) { getText(R.string.photo_image_preview )} else { getText(R.string.photo_image) }
             ).build()
-        ).setTapAction(tapAction).build())
+        ).build())
     }
 
     companion object

@@ -1,156 +1,6 @@
 <WatchFace width="450" height="450" shape="CIRCLE">
     <Scene>
-        <Condition>
-            <!-- 分岐の選択肢 -->
-            <Expressions>
-                <!-- １分おき -->
-              <!--
-                <Expression name="unit_equal_zero">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 0]]>
-                </Expression>
-                <Expression name="unit_equal_one">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 1]]>
-                </Expression>
-                <Expression name="unit_equal_two">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 2]]>
-                </Expression>
-                <Expression name="unit_equal_three">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 3]]>
-                </Expression>
-                <Expression name="unit_equal_four">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 4]]>
-                </Expression>
-                <Expression name="unit_equal_five">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 5]]>
-                </Expression>
-                <Expression name="unit_equal_six">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 6]]>
-                </Expression>
-                <Expression name="unit_equal_seven">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 7]]>
-                </Expression>
-                <Expression name="unit_equal_eight">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 8]]>
-                </Expression>
-                <Expression name="unit_equal_nine">
-                    <![CDATA[[MINUTE_UNITS_DIGIT] == 9]]>
-                </Expression>
-             -->
-                <!-- 10秒おき -->
-                <Expression name="unit_equal_zero">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 0]]>
-                </Expression>
-                <Expression name="unit_equal_one">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 1]]>
-                </Expression>
-                <Expression name="unit_equal_two">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 2]]>
-                </Expression>
-                <Expression name="unit_equal_three">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 3]]>
-                </Expression>
-                <Expression name="unit_equal_four">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 4]]>
-                </Expression>
-                <Expression name="unit_equal_five">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 5]]>
-                </Expression>
-                <Expression name="unit_equal_six">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 6]]>
-                </Expression>
-                <Expression name="unit_equal_seven">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 7]]>
-                </Expression>
-                <Expression name="unit_equal_eight">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 8]]>
-                </Expression>
-                <Expression name="unit_equal_nine">
-                    <![CDATA[[SECOND_TENS_DIGIT] == 9]]>
-                </Expression>
-            </Expressions>
 
-            <!-- 条件に合わせて画像を表示する -->
-            <Compare expression="unit_equal_one">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image01" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_two">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image02" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_three">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image03" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_four">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image04" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_five">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image05" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_six">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image06" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_seven">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image07" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_eight">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image08" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Compare expression="unit_equal_nine">
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="image09" />
-                    </PartImage>
-                </Group>
-            </Compare>
-            <Default>
-                <Group x="0" y="0" width="450" height="450" name="background_image">
-                    <PartImage x="0" y="0" width="450" height="450">
-                        <Variant mode="AMBIENT" target="alpha" value="0"/>
-                        <Image resource="ao1" />
-                    </PartImage>
-                </Group>
-            </Default>
-        </Condition>
 
 <!--
         <Group x="0" y="0" width="450" height="450" name="background_image">
@@ -161,6 +11,198 @@
             </PartImage>
         </Group>
 -->
+
+        <!-- 文字盤の背景 -->
+        <ComplicationSlot
+            x="0"
+            y="0"
+            width="450"
+            height="450"
+            slotId="0"
+            name="top_complication"
+            displayName="Top"
+            supportedTypes="PHOTO_IMAGE">
+            <DefaultProviderPolicy
+                primaryProvider="net.osdn.gokigen.watchface.prpr2.complications/net.osdn.gokigen.watchface.prpr2.complications.PictureProvideComplicationsService"
+                primaryProviderType="PHOTO_IMAGE"
+                defaultSystemProvider="EMPTY"
+                defaultSystemProviderType="PHOTO_IMAGE" />
+
+            <Complication type="PHOTO_IMAGE">
+                <Condition>
+                    <!-- 分岐の選択肢 -->
+                    <Expressions>
+                        <!-- １分おき -->
+                        <!--
+                          <Expression name="unit_equal_zero">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 0]]>
+                          </Expression>
+                          <Expression name="unit_equal_one">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 1]]>
+                          </Expression>
+                          <Expression name="unit_equal_two">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 2]]>
+                          </Expression>
+                          <Expression name="unit_equal_three">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 3]]>
+                          </Expression>
+                          <Expression name="unit_equal_four">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 4]]>
+                          </Expression>
+                          <Expression name="unit_equal_five">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 5]]>
+                          </Expression>
+                          <Expression name="unit_equal_six">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 6]]>
+                          </Expression>
+                          <Expression name="unit_equal_seven">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 7]]>
+                          </Expression>
+                          <Expression name="unit_equal_eight">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 8]]>
+                          </Expression>
+                          <Expression name="unit_equal_nine">
+                              <![CDATA[[MINUTE_UNITS_DIGIT] == 9]]>
+                          </Expression>
+                       -->
+                        <!-- 10秒おき -->
+                        <Expression name="unit_equal_zero">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 0]]>
+                        </Expression>
+                        <Expression name="unit_equal_one">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 1]]>
+                        </Expression>
+                        <Expression name="unit_equal_two">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 2]]>
+                        </Expression>
+                        <Expression name="unit_equal_three">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 3]]>
+                        </Expression>
+                        <Expression name="unit_equal_four">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 4]]>
+                        </Expression>
+                        <Expression name="unit_equal_five">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 5]]>
+                        </Expression>
+                        <Expression name="unit_equal_six">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 6]]>
+                        </Expression>
+                        <Expression name="unit_equal_seven">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 7]]>
+                        </Expression>
+                        <Expression name="unit_equal_eight">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 8]]>
+                        </Expression>
+                        <Expression name="unit_equal_nine">
+                            <![CDATA[[SECOND_TENS_DIGIT] == 9]]>
+                        </Expression>
+                    </Expressions>
+
+                    <!-- 条件に合わせて画像を表示する -->
+                    <Compare expression="unit_equal_one">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image01" />
+                                <!-- <Image resource="[COMPLICATION.PHOTO_IMAGE]" /> -->
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_two">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image02" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_three">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <!-- <Image resource="image03" /> -->
+                                <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_four">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image04" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_five">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image05" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_six">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image06" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_seven">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image07" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_eight">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image08" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Compare expression="unit_equal_nine">
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <Image resource="image09" />
+                            </PartImage>
+                        </Group>
+                    </Compare>
+                    <Default>
+
+                        <!--
+                                        <Complication type="PHOTO_IMAGE">
+                                            <Group x="0" y="0" width="450" height="450" name="background_image">
+                                                <PartImage x="0" y="0" width="450" height="450">
+                                                    <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                                    <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
+                                                </PartImage>
+                                            </Group>
+                                        </Complication>
+                        -->
+
+                        <Group x="0" y="0" width="450" height="450" name="background_image">
+                            <PartImage x="0" y="0" width="450" height="450">
+                                <Variant mode="AMBIENT" target="alpha" value="0"/>
+                                <!-- <Image resource="ao1" /> -->
+                                <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
+                            </PartImage>
+                        </Group>
+
+                    </Default>
+                </Condition>
+            </Complication>
+
+            <RoundRectangle x="130" y="350" width="190" height="90"
+                cornerRadiusX="15" cornerRadiusY="15">
+                <Fill color="#ff000000" />
+            </RoundRectangle>
+        </ComplicationSlot>
 
         <!-- 文字盤の背景 -->
         <PartDraw

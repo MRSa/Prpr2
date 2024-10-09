@@ -26,7 +26,7 @@ WFFを使用する場合のウォッチフェイス作成方法。(ビルドや�
 インストール後、Wear OS端末側で操作し、ウォッチフェイスを切り替える。
 
 
-## 参考： 画像生成プロンプト
+## 参考： 画像を生成したプロンプト
 
 ```
     mini, mini dress, slender, portrait, small breasts, shy, glasses, natural make up, school uniform, short sleeve shirt, short hair, hair over one eye, black hair, 1girl
