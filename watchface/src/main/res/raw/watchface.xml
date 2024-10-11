@@ -111,7 +111,8 @@
                         <Group x="0" y="0" width="450" height="450" name="background_image">
                             <PartImage x="0" y="0" width="450" height="450">
                                 <Variant mode="AMBIENT" target="alpha" value="0"/>
-                                <Image resource="image02" />
+                                <!-- <Image resource="image02" /> -->
+                                <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
                             </PartImage>
                         </Group>
                     </Compare>
@@ -119,8 +120,8 @@
                         <Group x="0" y="0" width="450" height="450" name="background_image">
                             <PartImage x="0" y="0" width="450" height="450">
                                 <Variant mode="AMBIENT" target="alpha" value="0"/>
-                                <!-- <Image resource="image03" /> -->
-                                <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
+                                <Image resource="image03" />
+                                <!-- <Image resource="[COMPLICATION.PHOTO_IMAGE]" /> -->
                             </PartImage>
                         </Group>
                     </Compare>
@@ -128,7 +129,8 @@
                         <Group x="0" y="0" width="450" height="450" name="background_image">
                             <PartImage x="0" y="0" width="450" height="450">
                                 <Variant mode="AMBIENT" target="alpha" value="0"/>
-                                <Image resource="image04" />
+                                <!-- <Image resource="image04" /> -->
+                                <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
                             </PartImage>
                         </Group>
                     </Compare>

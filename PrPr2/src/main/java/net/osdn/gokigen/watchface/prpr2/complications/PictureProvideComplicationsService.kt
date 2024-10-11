@@ -1,15 +1,14 @@
 package net.osdn.gokigen.watchface.prpr2.complications
 
-import android.app.PendingIntent
 import android.graphics.drawable.Icon
 import android.util.Log
-import androidx.wear.complications.data.ComplicationData
-import androidx.wear.complications.data.ComplicationType
-import androidx.wear.complications.data.NoDataComplicationData
-import androidx.wear.complications.data.PhotoImageComplicationData
-import androidx.wear.complications.data.PlainComplicationText
-import androidx.wear.complications.datasource.ComplicationRequest
-import androidx.wear.complications.datasource.SuspendingComplicationDataSourceService
+import androidx.wear.watchface.complications.data.ComplicationData
+import androidx.wear.watchface.complications.data.ComplicationType
+import androidx.wear.watchface.complications.data.NoDataComplicationData
+import androidx.wear.watchface.complications.data.PhotoImageComplicationData
+import androidx.wear.watchface.complications.data.PlainComplicationText
+import androidx.wear.watchface.complications.datasource.ComplicationRequest
+import androidx.wear.watchface.complications.datasource.SuspendingComplicationDataSourceService
 
 class PictureProvideComplicationsService : SuspendingComplicationDataSourceService()
 {
@@ -64,3 +63,4 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
         private val TAG = PictureProvideComplicationsService::class.java.simpleName
     }
 }
+

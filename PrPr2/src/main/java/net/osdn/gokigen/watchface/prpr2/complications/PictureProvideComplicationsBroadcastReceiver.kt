@@ -6,7 +6,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import androidx.wear.complications.datasource.ComplicationDataSourceUpdateRequester
+import androidx.wear.watchface.complications.datasource.ComplicationDataSourceUpdateRequester
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -29,7 +29,6 @@ class PictureProvideComplicationsBroadcastReceiver : BroadcastReceiver()
         // Required when using async code in onReceive().
         val result = goAsync()
 
-        // Launches coroutine to update the DataStore counter value.
         scope.launch {
             try
             {

@@ -1,5 +1,6 @@
 package net.osdn.gokigen.watchface.prpr2.complications
 
+import android.util.Log
 import java.util.Random
 
 class DrawableResourceProvider
@@ -117,12 +118,19 @@ class DrawableResourceProvider
     {
         try
         {
-            return (imageRscIdList[randomGenerator.nextInt(imageRscIdList.count())])
+            val id = randomGenerator.nextInt(imageRscIdList.count())
+            Log.v(TAG, "getDrawable() : ID:$id")
+            return (imageRscIdList[id])
         }
         catch (e: Exception)
         {
             e.printStackTrace()
         }
         return (R.drawable.image000)
+    }
+
+    companion object
+    {
+        private val TAG = DrawableResourceProvider::class.java.simpleName
     }
 }

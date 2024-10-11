@@ -44,10 +44,11 @@
 -->
 
         <service
-            android:name="net.osdn.gokigen.watchface.prpr2.complications.PictureProvideComplicationsService"
+            android:name=".PictureProvideComplicationsService"
             android:exported="true"
             android:icon="@drawable/moon"
             android:label="@string/large_image_label"
+            android:directBootAware="true"
             android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
@@ -57,7 +58,10 @@
                 android:value="LARGE_IMAGE" />
             <meta-data
                 android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS"
-                android:value="0" />
+                android:value="10" />
+            <meta-data
+                android:name="androidx.wear.watchface.complications.data.source.IMMEDIATE_UPDATE_PERIOD_MILLISECONDS"
+                android:value="10000" />
         </service>
         <receiver android:name="net.osdn.gokigen.watchface.prpr2.complications.PictureProvideComplicationsBroadcastReceiver" />
     </application>
