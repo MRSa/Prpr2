@@ -112,6 +112,21 @@ class DrawableResourceProvider
         R.drawable.image084,
         R.drawable.image085,
         R.drawable.image086,
+        R.drawable.image087,
+        R.drawable.image088,
+        R.drawable.image089,
+        R.drawable.image090,
+
+        R.drawable.image091,
+        R.drawable.image092,
+        R.drawable.image093,
+        R.drawable.image094,
+        R.drawable.image095,
+        R.drawable.image096,
+        R.drawable.image097,
+        R.drawable.image098,
+        R.drawable.image099,
+        R.drawable.image100,
     )
 
     fun getDrawable() : Int
@@ -119,7 +134,7 @@ class DrawableResourceProvider
         try
         {
             val id = randomGenerator.nextInt(imageRscIdList.count())
-            Log.v(TAG, "getDrawable() : ID:$id")
+            //Log.v(TAG, "getDrawable() : ID:$id")
             return (imageRscIdList[id])
         }
         catch (e: Exception)
@@ -131,6 +146,6 @@ class DrawableResourceProvider
 
     companion object
     {
-        private val TAG = DrawableResourceProvider::class.java.simpleName
+        //private val TAG = DrawableResourceProvider::class.java.simpleName
     }
 }

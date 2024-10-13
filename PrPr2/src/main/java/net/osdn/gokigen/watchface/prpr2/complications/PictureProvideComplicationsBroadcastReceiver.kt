@@ -58,11 +58,12 @@ class PictureProvideComplicationsBroadcastReceiver : BroadcastReceiver()
         private const val EXTRA_COMPLICATION_ID =
             "net.osdn.gokigen.watchface.prpr2.complications.action.COMPLICATION_ID"
 
-        fun getToggleIntent(
+        fun getIntent(
             context: Context,
             dataSource: ComponentName,
             complicationId: Int
         ): PendingIntent {
+            Log.v(TAG, "getIntent()")
             val intent = Intent(context, PictureProvideComplicationsBroadcastReceiver::class.java)
             intent.putExtra(EXTRA_DATA_SOURCE_COMPONENT, dataSource)
             intent.putExtra(EXTRA_COMPLICATION_ID, complicationId)

@@ -2,6 +2,7 @@
 <Scene>
     <Condition>
         <!-- 分岐の選択肢 -->
+        <!-- １分おき -->
         <Expressions>
             <Expression name="unit_equal_zero">
                 <![CDATA[[MINUTE_UNITS_DIGIT] == 0]]>
@@ -40,7 +41,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image01" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -48,7 +49,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image02" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -56,7 +57,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image03" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -64,7 +65,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image04" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -72,7 +73,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image05" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -80,7 +81,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image06" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -88,7 +89,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image07" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -96,7 +97,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image08" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
@@ -104,7 +105,7 @@
             <Group x="0" y="0" width="380" height="400" name="background_image">
                 <PartImage x="0" y="0" width="380" height="400">
                     <Variant mode="AMBIENT" target="alpha" value="0"/>
-                    <Image resource="image09" />
+                    <Image resource="ao1" />
                 </PartImage>
             </Group>
         </Compare>
