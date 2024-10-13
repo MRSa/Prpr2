@@ -2,6 +2,7 @@
     <string name="app_name">Picture Complications</string>
     <string name="photo_image_preview">Background Image(Preview)</string>
     <string name="photo_image">Background Image</string>
-    <string name="small_image_label">Picture(Small)</string>
+    <string name="small_image_preview">Small Image(Preview)</string>
+    <string name="small_image">Small Image</string>
     <string name="large_image_label">Picture(Large)</string>
 </resources>
