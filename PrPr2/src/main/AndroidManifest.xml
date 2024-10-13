@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.osdn.gokigen.watchface.prpr2.complications"
+    android:versionCode="10000"
+    android:versionName="1.0.0">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="com.google.android.wearable.permission.USE_IMMEDIATE_COMPLICATION_UPDATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/moon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault"
+        tools:ignore="AllowBackup">
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+<!--
+        <service
+            android:name="net.osdn.gokigen.watchface.prpr2.complications.PictureProvideComplicationsService"
+            android:exported="true"
+            android:icon="@drawable/moon"
+            android:label="@string/small_image_label"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.wearable.complications.SUPPORTED_TYPES"
+                android:value="SMALL_IMAGE" />
+            <meta-data
+                android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS"
+                android:value="0" />
+        </service>
+-->
+
+        <service
+            android:name=".PictureProvideComplicationsService"
+            android:exported="true"
+            android:icon="@drawable/moon"
+            android:label="@string/large_image_label"
+            android:directBootAware="true"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.wearable.complications.SUPPORTED_TYPES"
+                android:value="LARGE_IMAGE,SMALL_IMAGE" />
+            <meta-data
+                android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS"
+                android:value="300" />
+            <meta-data
+                android:name="androidx.wear.watchface.complications.data.source.IMMEDIATE_UPDATE_PERIOD_MILLISECONDS"
+                android:value="10000" />
+        </service>
+        <receiver android:name="net.osdn.gokigen.watchface.prpr2.complications.PictureProvideComplicationsBroadcastReceiver" />
+    </application>
+</manifest>

@@ -5,6 +5,17 @@
       <SelectionState runConfigName="Gokigen">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="prpr2">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-10-12T14:42:11.991388200Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\MRSa\.android\avd\Wear_OS_Small_Round_API_34.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>

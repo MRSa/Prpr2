@@ -20,4 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Prpr2"
-include(":app")
+include(":prpr2")
+include(":watchface")

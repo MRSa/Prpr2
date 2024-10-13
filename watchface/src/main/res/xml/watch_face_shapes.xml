@@ -1,0 +1,6 @@
+<WatchFaces>
+    <WatchFace shape="CIRCLE" width="450" height="450"
+        file="@raw/watchface"/>
+    <WatchFace shape="RECTANGLE" width="380" height="400"
+        file="@raw/watchface_rectangle"/>
+</WatchFaces>
