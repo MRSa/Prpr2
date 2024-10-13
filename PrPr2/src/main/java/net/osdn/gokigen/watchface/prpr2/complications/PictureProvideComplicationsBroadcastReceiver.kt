@@ -18,17 +18,13 @@ class PictureProvideComplicationsBroadcastReceiver : BroadcastReceiver()
 
     override fun onReceive(context: Context, intent: Intent?)
     {
-        Log.v(TAG, "onReceive()")
+        // Log.v(TAG, "onReceive() : $intent")
 
-        // Retrieve complication values from Intent's extras.
         val extras = intent?.extras ?: return
-
         val dataSource = extras.getParcelable<ComponentName>(EXTRA_DATA_SOURCE_COMPONENT) ?: return
         val complicationId = extras.getInt(EXTRA_COMPLICATION_ID)
 
-        // Required when using async code in onReceive().
         val result = goAsync()
-
         scope.launch {
             try
             {
@@ -42,7 +38,6 @@ class PictureProvideComplicationsBroadcastReceiver : BroadcastReceiver()
             }
             finally
             {
-                // Always call finish, even if cancelled
                 result.finish()
             }
         }
@@ -63,7 +58,6 @@ class PictureProvideComplicationsBroadcastReceiver : BroadcastReceiver()
             dataSource: ComponentName,
             complicationId: Int
         ): PendingIntent {
-            Log.v(TAG, "getIntent()")
             val intent = Intent(context, PictureProvideComplicationsBroadcastReceiver::class.java)
             intent.putExtra(EXTRA_DATA_SOURCE_COMPONENT, dataSource)
             intent.putExtra(EXTRA_COMPLICATION_ID, complicationId)
