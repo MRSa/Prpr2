@@ -35,5 +35,6 @@ android {
 
 dependencies {
     implementation(libs.play.services.wearable)
+    implementation(libs.wear.complications.data.source)
     implementation(libs.wear.complications.data.source.ktx)
 }

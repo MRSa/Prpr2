@@ -1,5 +1,7 @@
 package net.osdn.gokigen.watchface.prpr2.complications
 
+import android.app.PendingIntent
+import android.content.ComponentName
 import android.graphics.drawable.Icon
 import android.util.Log
 import androidx.wear.watchface.complications.data.ComplicationData
@@ -17,6 +19,7 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
 {
     private val provider = DrawableResourceProvider()
 
+
     override fun getPreviewData(type: ComplicationType): ComplicationData
     {
         try
@@ -28,9 +31,9 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
             }
             if (type == ComplicationType.SMALL_IMAGE)
             {
-                return (getSmallImageComplicationData(true))
+                return (getSmallImageComplicationData(null, true))
             }
-            return (getPhotoImageComplicationData(true))
+            return (getPhotoImageComplicationData(null, true))
         }
         catch (e: Exception)
         {
@@ -48,11 +51,20 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
             {
                 return NoDataComplicationData()
             }
+
+            val pictureProvideIntent = PictureProvideComplicationsBroadcastReceiver.getIntent(
+                context = this,
+                dataSource =  ComponentName(this, javaClass),
+                complicationId = request.complicationInstanceId
+            )
+
+
+
             if (request.complicationType == ComplicationType.SMALL_IMAGE)
             {
-                return (getSmallImageComplicationData())
+                return (getSmallImageComplicationData(pictureProvideIntent))
             }
-            return (getPhotoImageComplicationData())
+            return (getPhotoImageComplicationData(pictureProvideIntent))
         }
         catch (e: Exception)
         {
@@ -77,24 +89,26 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
         Log.d(TAG, "onComplicationDeactivated(): $complicationInstanceId")
     }
 
-    private fun getSmallImageComplicationData(isPreview: Boolean = false): ComplicationData
+    private fun getSmallImageComplicationData(pendingIntent: PendingIntent?, isPreview: Boolean = false): ComplicationData
     {
         return (SmallImageComplicationData.Builder(
             smallImage = SmallImage.Builder(Icon.createWithResource(this, provider.getDrawable()), SmallImageType.ICON).build(),
             contentDescription = PlainComplicationText.Builder(
                 text = if (isPreview) { getText(R.string.small_image_preview )} else { getText(R.string.small_image) }
             ).build()
-        ).build())
+        ).setTapAction(pendingIntent)
+            .build())
     }
 
-    private fun getPhotoImageComplicationData(isPreview: Boolean = false): ComplicationData
+    private fun getPhotoImageComplicationData(pendingIntent: PendingIntent?, isPreview: Boolean = false): ComplicationData
     {
         return (PhotoImageComplicationData.Builder(
             photoImage = Icon.createWithResource(this, provider.getDrawable()),
             contentDescription = PlainComplicationText.Builder(
                 text = if (isPreview) { getText(R.string.photo_image_preview )} else { getText(R.string.photo_image) }
             ).build()
-        ).build())
+        ).setTapAction(pendingIntent)
+            .build())
     }
 
     companion object
@@ -102,4 +116,3 @@ class PictureProvideComplicationsService : SuspendingComplicationDataSourceServi
         private val TAG = PictureProvideComplicationsService::class.java.simpleName
     }
 }
-
