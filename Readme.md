@@ -20,11 +20,16 @@ WFFを使用する場合のウォッチフェイス作成方法。(ビルドや�
 ## インストール方法
 
 ```
+  adb install Prpr2/build/outputs/apk/debug/prpr2-debug.apk
   adb install watchface/build/outputs/apk/debug/watchface-debug.apk
 ```
 
 インストール後、Wear OS端末側で操作し、ウォッチフェイスを切り替える。
 
+## 制約事項
+
+画像切り替えの周期が長い。（5分設定...エミュレータだと10分程度で切り替わる）
+代替手段として、画面タップで画像を更新するように変更した。
 
 ## 参考： 画像を生成したプロンプト
 
